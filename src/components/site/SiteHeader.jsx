@@ -59,7 +59,7 @@ export default function SiteHeader() {
         <div className="flex items-center gap-3">
           <Link
             to="/contact"
-            className="group hidden min-h-[42px] items-center gap-2 bg-primary px-5 font-mono text-[12px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90 sm:inline-flex"
+            className="group hidden min-h-[42px] items-center gap-2 bg-primary px-5 font-mono text-[12px] font-bold uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90 sm:inline-flex"
           >
             Request a quote
             <ArrowUpRight

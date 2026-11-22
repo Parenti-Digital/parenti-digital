@@ -207,7 +207,7 @@ export default function RequestForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="mt-6 inline-flex min-h-[52px] w-full items-center justify-center bg-primary px-6 font-mono text-[13px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="mt-6 inline-flex min-h-[52px] w-full items-center justify-center bg-primary px-6 font-mono text-[13px] font-bold uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {submitting ? "Sending…" : "Send request"}
       </button>

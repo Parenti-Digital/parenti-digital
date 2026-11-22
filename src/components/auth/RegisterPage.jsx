@@ -88,7 +88,7 @@ export function RegisterPage() {
         <p className="mb-4 text-sm text-muted-foreground">
           <span className="font-medium text-foreground">{email}</span> is already verified. Sign in to continue.
         </p>
-        <AuthLink to="/login" returnTo={returnTo} className="inline-flex h-12 w-full items-center justify-center rounded-md bg-primary text-sm font-medium text-primary-foreground hover:bg-primary/90">
+        <AuthLink to="/login" returnTo={returnTo} className="inline-flex h-12 w-full items-center justify-center rounded-md bg-primary text-sm font-semibold text-primary-foreground hover:bg-primary/90">
           Sign in
         </AuthLink>
       </AuthLayout>

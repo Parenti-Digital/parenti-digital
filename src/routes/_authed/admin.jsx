@@ -111,7 +111,7 @@ function AdminPage() {
               onClick={() => setFilter(status)}
               className={`inline-flex min-h-[38px] items-center border px-3 font-mono text-[12px] uppercase tracking-[0.18em] transition-colors ${
                 filter === status
-                  ? "border-primary bg-primary text-primary-foreground"
+                  ? "border-primary bg-primary font-semibold text-primary-foreground"
                   : "border-border text-muted-foreground hover:border-primary/60 hover:text-primary"
               }`}
             >

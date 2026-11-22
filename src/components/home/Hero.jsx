@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link
               to="/contact"
-              className="group inline-flex min-h-[52px] items-center justify-center gap-3 bg-primary px-7 font-mono text-[13px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90"
+              className="group inline-flex min-h-[52px] items-center justify-center gap-3 bg-primary px-7 font-mono text-[13px] font-bold uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Request a quote
               <ArrowRight
