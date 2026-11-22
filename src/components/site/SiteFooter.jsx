@@ -17,12 +17,12 @@ export default function SiteFooter() {
                 <span className="font-display text-[15px] font-extrabold uppercase tracking-[0.22em]">
                   Parenti
                 </span>
-                <span className="mt-1 font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground">
+                <span className="mt-1 font-mono text-[12px] uppercase tracking-[0.3em] text-muted-foreground">
                   Media · AV · Live
                 </span>
               </span>
             </Link>
-            <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-muted-foreground">
               Websites, livestreams, sound systems, and the training to run them. Built and
               supported by Michael Parenti.
             </p>
@@ -36,7 +36,7 @@ export default function SiteFooter() {
                   <Link
                     to="/services"
                     hash={group.id}
-                    className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                    className="text-[15px] text-muted-foreground transition-colors hover:text-primary"
                   >
                     {group.title}
                   </Link>
@@ -45,7 +45,7 @@ export default function SiteFooter() {
               <li>
                 <Link
                   to="/services"
-                  className="font-mono text-[10px] uppercase tracking-[0.22em] text-foreground transition-colors hover:text-primary"
+                  className="font-mono text-[12px] uppercase tracking-[0.22em] text-foreground transition-colors hover:text-primary"
                 >
                   All services
                 </Link>
@@ -55,7 +55,7 @@ export default function SiteFooter() {
 
           <div>
             <h3 className="mono-label">Contact</h3>
-            <ul className="mt-4 space-y-2.5 text-sm">
+            <ul className="mt-4 space-y-2.5 text-[15px]">
               <li className="text-foreground">{BRAND.owner}</li>
               <li>
                 <a href={BRAND.emailHref} className="text-muted-foreground hover:text-primary">
@@ -77,16 +77,16 @@ export default function SiteFooter() {
         </div>
 
         <div className="mt-14 flex flex-col gap-2 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+          <p className="font-mono text-[12px] uppercase tracking-[0.22em] text-muted-foreground">
             © {year} {BRAND.name} LLC · All rights reserved
           </p>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+            <p className="font-mono text-[12px] uppercase tracking-[0.22em] text-muted-foreground">
               On-site and remote · Chicago area
             </p>
             <Link
               to="/login"
-              className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground transition-colors hover:text-primary"
+              className="font-mono text-[12px] uppercase tracking-[0.22em] text-muted-foreground transition-colors hover:text-primary"
             >
               Owner login
             </Link>

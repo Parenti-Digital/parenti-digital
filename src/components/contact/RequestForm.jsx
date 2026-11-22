@@ -73,7 +73,7 @@ export default function RequestForm() {
         <button
           type="button"
           onClick={() => setSent(false)}
-          className="mt-6 inline-flex min-h-[44px] items-center border border-border px-5 font-mono text-[10px] uppercase tracking-[0.22em] text-foreground transition-colors hover:border-primary/60 hover:text-primary"
+          className="mt-6 inline-flex min-h-[44px] items-center border border-border px-5 font-mono text-[12px] uppercase tracking-[0.22em] text-foreground transition-colors hover:border-primary/60 hover:text-primary"
         >
           Send another request
         </button>
@@ -207,11 +207,11 @@ export default function RequestForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="mt-6 inline-flex min-h-[52px] w-full items-center justify-center bg-primary px-6 font-mono text-[11px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="mt-6 inline-flex min-h-[52px] w-full items-center justify-center bg-primary px-6 font-mono text-[13px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {submitting ? "Sending…" : "Send request"}
       </button>
-      <p className="mt-3 font-mono text-[9px] uppercase tracking-[0.18em] text-muted-foreground">
+      <p className="mt-3 font-mono text-[12px] uppercase tracking-[0.18em] text-muted-foreground">
         Details are used only to reply to your request.
       </p>
     </form>

@@ -62,7 +62,7 @@ export default function CapabilityBands() {
             </div>
 
             <div className={band.reverse ? "lg:order-1" : ""}>
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary">
+              <p className="font-mono text-[12px] uppercase tracking-[0.3em] text-primary">
                 {band.kicker}
               </p>
               <h2 className="mt-5 font-display text-3xl font-extrabold leading-[1] tracking-[-0.025em] sm:text-4xl">
@@ -82,7 +82,7 @@ export default function CapabilityBands() {
               <Link
                 to="/services"
                 hash={band.id}
-                className="group mt-8 inline-flex min-h-[44px] items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-primary"
+                className="group mt-8 inline-flex min-h-[44px] items-center gap-2 font-mono text-[12px] uppercase tracking-[0.22em] text-primary"
               >
                 Full service details
                 <ArrowRight

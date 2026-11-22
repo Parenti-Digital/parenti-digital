@@ -19,7 +19,7 @@ export default function CtaBand({ title, description }) {
         <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
           <Link
             to="/contact"
-            className="group inline-flex min-h-[48px] items-center justify-center gap-3 bg-primary px-6 font-mono text-[11px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90"
+            className="group inline-flex min-h-[48px] items-center justify-center gap-3 bg-primary px-6 font-mono text-[13px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Request a quote
             <ArrowRight
@@ -29,14 +29,14 @@ export default function CtaBand({ title, description }) {
           </Link>
           <a
             href={BRAND.phoneHref}
-            className="inline-flex min-h-[48px] items-center justify-center gap-2 border border-border px-6 font-mono text-[11px] uppercase tracking-[0.22em] text-foreground transition-colors hover:border-primary/60 hover:text-primary"
+            className="inline-flex min-h-[48px] items-center justify-center gap-2 border border-border px-6 font-mono text-[13px] uppercase tracking-[0.22em] text-foreground transition-colors hover:border-primary/60 hover:text-primary"
           >
             <Phone className="h-3.5 w-3.5" aria-hidden="true" />
             {BRAND.phone}
           </a>
           <a
             href={BRAND.emailHref}
-            className="inline-flex min-h-[48px] items-center justify-center gap-2 border border-border px-6 font-mono text-[11px] uppercase tracking-[0.22em] text-foreground transition-colors hover:border-primary/60 hover:text-primary"
+            className="inline-flex min-h-[48px] items-center justify-center gap-2 border border-border px-6 font-mono text-[13px] uppercase tracking-[0.22em] text-foreground transition-colors hover:border-primary/60 hover:text-primary"
           >
             <Mail className="h-3.5 w-3.5" aria-hidden="true" />
             Email

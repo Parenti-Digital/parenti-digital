@@ -13,7 +13,7 @@ export default function ServiceMatrix() {
             title="Nine disciplines, one operator."
             description="Most organizations end up juggling a web designer, a sound guy, and a streaming volunteer who all blame each other. Here it is one system, one point of contact, and one person who knows how the pieces connect."
           />
-          <p className="max-w-xs border-l border-primary/40 pl-4 font-mono text-[10px] uppercase leading-relaxed tracking-[0.18em] text-muted-foreground">
+          <p className="max-w-xs border-l border-primary/40 pl-4 font-mono text-[12px] uppercase leading-relaxed tracking-[0.18em] text-muted-foreground">
             Digital work is fixed price. Production and install work is quoted after a walkthrough.
           </p>
         </div>

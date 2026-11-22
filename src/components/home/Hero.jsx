@@ -20,7 +20,7 @@ export default function Hero() {
 
       <div className="relative mx-auto grid max-w-7xl gap-12 px-5 pb-16 pt-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:px-8 lg:pb-24 lg:pt-20">
         <div>
-          <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em]">
+          <div className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.3em]">
             <span className="flex h-2 w-2 items-center justify-center">
               <span className="h-1.5 w-1.5 animate-pulse bg-primary" />
             </span>
@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link
               to="/contact"
-              className="group inline-flex min-h-[52px] items-center justify-center gap-3 bg-primary px-7 font-mono text-[11px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90"
+              className="group inline-flex min-h-[52px] items-center justify-center gap-3 bg-primary px-7 font-mono text-[13px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Request a quote
               <ArrowRight
@@ -54,7 +54,7 @@ export default function Hero() {
             </Link>
             <Link
               to="/pricing"
-              className="inline-flex min-h-[52px] items-center justify-center border border-border px-7 font-mono text-[11px] uppercase tracking-[0.22em] text-foreground transition-colors hover:border-primary/60 hover:text-primary"
+              className="inline-flex min-h-[52px] items-center justify-center border border-border px-7 font-mono text-[13px] uppercase tracking-[0.22em] text-foreground transition-colors hover:border-primary/60 hover:text-primary"
             >
               See pricing
             </Link>
@@ -64,7 +64,7 @@ export default function Hero() {
             {facts.map((fact) => (
               <li
                 key={fact}
-                className="flex items-start gap-2.5 font-mono text-[10px] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground"
+                className="flex items-start gap-2.5 font-mono text-[12px] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground"
               >
                 <span className="mt-1 h-1 w-1 shrink-0 bg-primary" aria-hidden="true" />
                 {fact}
@@ -86,10 +86,10 @@ export default function Hero() {
               aria-hidden="true"
             />
             <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5">
-              <span className="font-mono text-[9px] uppercase tracking-[0.28em] text-foreground/70">
+              <span className="font-mono text-[12px] uppercase tracking-[0.28em] text-foreground/70">
                 Fig. 01 — Signal chain
               </span>
-              <span className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.28em] text-primary">
+              <span className="flex items-center gap-2 font-mono text-[12px] uppercase tracking-[0.28em] text-primary">
                 <span className="h-1.5 w-1.5 bg-primary" aria-hidden="true" />
                 Live
               </span>

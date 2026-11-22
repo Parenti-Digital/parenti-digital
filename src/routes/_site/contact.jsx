@@ -7,7 +7,7 @@ import { BRAND, serviceGroups } from "@/lib/services-data";
 export const Route = createFileRoute("/_site/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Request Services — Parenti Media Solutions" },
+      { title: "Contact & Request Services — Parenti Digital" },
       {
         name: "description",
         content:
@@ -39,15 +39,15 @@ function ContactPage() {
               <h2 className="mono-label text-primary">Direct</h2>
               <ul className="mt-5 space-y-4">
                 <li>
-                  <p className="text-sm font-medium text-foreground">{BRAND.owner}</p>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                  <p className="text-[15px] font-medium text-foreground">{BRAND.owner}</p>
+                  <p className="font-mono text-[12px] uppercase tracking-[0.2em] text-muted-foreground">
                     Owner & operator
                   </p>
                 </li>
                 <li>
                   <a
                     href={BRAND.emailHref}
-                    className="flex min-h-[44px] items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-primary"
+                    className="flex min-h-[44px] items-center gap-3 text-[15px] text-muted-foreground transition-colors hover:text-primary"
                   >
                     <Mail className="h-4 w-4 text-primary" aria-hidden="true" />
                     {BRAND.email}
@@ -56,13 +56,13 @@ function ContactPage() {
                 <li>
                   <a
                     href={BRAND.phoneHref}
-                    className="flex min-h-[44px] items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-primary"
+                    className="flex min-h-[44px] items-center gap-3 text-[15px] text-muted-foreground transition-colors hover:text-primary"
                   >
                     <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
                     {BRAND.phone}
                   </a>
                 </li>
-                <li className="flex items-start gap-3 text-sm text-muted-foreground">
+                <li className="flex items-start gap-3 text-[15px] text-muted-foreground">
                   <Clock className="mt-0.5 h-4 w-4 text-primary" aria-hidden="true" />
                   <span>On site in the Chicago area, remote anywhere.</span>
                 </li>
@@ -71,7 +71,7 @@ function ContactPage() {
 
             <div className="border border-border p-6">
               <h2 className="mono-label text-primary">Fastest path</h2>
-              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+              <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-muted-foreground">
                 <li>
                   <span className="text-foreground">Website, domain, or email:</span> include your
                   current site if you have one.
@@ -91,8 +91,8 @@ function ContactPage() {
               <h2 className="mono-label text-primary">Services</h2>
               <ul className="mt-4 grid gap-1.5">
                 {serviceGroups.map((group) => (
-                  <li key={group.id} className="text-sm text-muted-foreground">
-                    <span className="mr-2 font-mono text-[10px] text-primary">{group.number}</span>
+                  <li key={group.id} className="text-[15px] text-muted-foreground">
+                    <span className="mr-2 font-mono text-[12px] text-primary">{group.number}</span>
                     {group.title}
                   </li>
                 ))}

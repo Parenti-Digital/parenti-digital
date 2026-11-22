@@ -8,11 +8,11 @@ import { BRAND, serviceGroups } from "@/lib/services-data";
 export const Route = createFileRoute("/_site/about")({
   head: () => ({
     meta: [
-      { title: "About — Parenti Media Solutions" },
+      { title: "About — Parenti Digital" },
       {
         name: "description",
         content:
-          "Parenti Media Solutions is owned and operated by Michael Parenti, building websites, livestreams, and sound systems for organizations that need them to work every week.",
+          "Parenti Digital is owned and operated by Michael Parenti, building websites, livestreams, and sound systems for organizations that need them to work every week.",
       },
     ],
   }),
@@ -45,7 +45,7 @@ function AboutPage() {
         index="About"
         kicker="The company"
         title="One operator across the whole signal chain."
-        description="Parenti Media Solutions is a media company owned and operated by Michael Parenti. It exists because most organizations do not need five vendors who never talk to each other. They need one person who can build the website, wire the room, run the stream, and teach the team to keep it running."
+        description="Parenti Digital is a digital and media company owned and operated by Michael Parenti. It exists because most organizations do not need five vendors who never talk to each other. They need one person who can build the website, wire the room, run the stream, and teach the team to keep it running."
       />
 
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
@@ -58,7 +58,7 @@ function AboutPage() {
               <p>
                 Michael Parenti builds and maintains media systems for churches, nonprofits, small
                 businesses, and event teams: the website people find you through, the email on your
-                own domain, the social profiles that look like your brand, the livestream for the
+                own domain, the video and graphics that carry your brand, the livestream for the
                 people who cannot be in the room, and the sound system the room depends on.
               </p>
               <p>
@@ -75,7 +75,7 @@ function AboutPage() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 to="/contact"
-                className="group inline-flex min-h-[48px] items-center justify-center gap-2 bg-primary px-6 font-mono text-[10px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90"
+                className="group inline-flex min-h-[48px] items-center justify-center gap-2 bg-primary px-6 font-mono text-[12px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 Request a quote
                 <ArrowRight
@@ -85,7 +85,7 @@ function AboutPage() {
               </Link>
               <a
                 href={BRAND.phoneHref}
-                className="inline-flex min-h-[48px] items-center justify-center gap-2 border border-border px-6 font-mono text-[10px] uppercase tracking-[0.22em] text-foreground transition-colors hover:border-primary/60 hover:text-primary"
+                className="inline-flex min-h-[48px] items-center justify-center gap-2 border border-border px-6 font-mono text-[12px] uppercase tracking-[0.22em] text-foreground transition-colors hover:border-primary/60 hover:text-primary"
               >
                 <Phone className="h-3.5 w-3.5" aria-hidden="true" />
                 {BRAND.phone}
@@ -105,10 +105,10 @@ function AboutPage() {
               aria-hidden="true"
             />
             <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 p-5">
-              <span className="font-mono text-[9px] uppercase tracking-[0.28em] text-foreground/70">
+              <span className="font-mono text-[12px] uppercase tracking-[0.28em] text-foreground/70">
                 Fig. 02 — Control room
               </span>
-              <span className="font-mono text-[9px] uppercase tracking-[0.28em] text-primary">
+              <span className="font-mono text-[12px] uppercase tracking-[0.28em] text-primary">
                 {BRAND.owner}
               </span>
             </div>
@@ -122,13 +122,13 @@ function AboutPage() {
           <div className="mt-10 grid gap-px bg-border sm:grid-cols-2">
             {principles.map((principle, i) => (
               <div key={principle.title} className="bg-background p-6 lg:p-8">
-                <span className="font-mono text-[11px] tracking-[0.25em] text-primary">
+                <span className="font-mono text-[13px] tracking-[0.25em] text-primary">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-5 font-display text-lg font-bold tracking-[-0.01em]">
                   {principle.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{principle.body}</p>
+                <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{principle.body}</p>
               </div>
             ))}
           </div>
@@ -146,7 +146,7 @@ function AboutPage() {
               </p>
               <a
                 href={BRAND.emailHref}
-                className="mt-6 inline-flex min-h-[44px] items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-primary"
+                className="mt-6 inline-flex min-h-[44px] items-center gap-2 font-mono text-[12px] uppercase tracking-[0.22em] text-primary"
               >
                 <Mail className="h-3.5 w-3.5" aria-hidden="true" />
                 {BRAND.email}
@@ -158,9 +158,9 @@ function AboutPage() {
                   <Link
                     to="/services"
                     hash={group.id}
-                    className="flex min-h-[52px] items-center gap-3 px-5 py-3 text-sm text-muted-foreground transition-colors hover:text-primary"
+                    className="flex min-h-[52px] items-center gap-3 px-5 py-3 text-[15px] text-muted-foreground transition-colors hover:text-primary"
                   >
-                    <span className="font-mono text-[10px] text-primary">{group.number}</span>
+                    <span className="font-mono text-[12px] text-primary">{group.number}</span>
                     {group.title}
                   </Link>
                 </li>

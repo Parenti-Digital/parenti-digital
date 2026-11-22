@@ -5,7 +5,7 @@ export default function PriceRow({ item }) {
         <h4 className="font-display text-base font-bold tracking-[-0.01em] text-foreground">
           {item.name}
         </h4>
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
           {item.description}
         </p>
       </div>
@@ -20,7 +20,7 @@ export default function PriceRow({ item }) {
           {item.price}
         </div>
         {item.unit ? (
-          <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+          <div className="mt-1 font-mono text-[12px] uppercase tracking-[0.22em] text-muted-foreground">
             {item.unit}
           </div>
         ) : null}

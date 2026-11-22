@@ -1,7 +1,7 @@
 export const BRAND = {
-  name: "Parenti Media Solutions",
+  name: "Parenti Digital",
   shortName: "Parenti",
-  descriptor: "Media · AV · Live",
+  descriptor: "Digital · AV · Live",
   owner: "Michael Parenti",
   email: "MSParentiJr@gmail.com",
   emailHref: "mailto:MSParentiJr@gmail.com",
@@ -72,33 +72,8 @@ export const serviceGroups = [
     note: "Domain registration and mailbox fees are paid directly to the registrar and are separate from setup.",
   },
   {
-    id: "social",
-    number: "03",
-    title: "Social Media Setup & Management",
-    short: "Profiles that look like your brand, plus ongoing posting if you want it handled.",
-    pricing: "mixed",
-    items: [
-      {
-        name: "Social Media Account Setup",
-        price: "$150",
-        unit: "per platform",
-        description:
-          "One-time creation or optimization per platform. Profile and cover images, organization description, contact information, website links, consistent branding, and an initial post template. Facebook, Instagram, and YouTube.",
-      },
-      {
-        name: "Ongoing Management & Posting",
-        price: "Request a quote",
-        unit: "monthly",
-        quote: true,
-        description:
-          "Content calendar, caption writing, scheduling, and replies, quoted by posting volume and number of platforms.",
-      },
-    ],
-    note: "Account setup does not include ongoing management. Management is quoted separately and billed monthly.",
-  },
-  {
     id: "support",
-    number: "04",
+    number: "03",
     title: "Website Maintenance & Support",
     short: "Someone who already knows your site, on call before something breaks.",
     pricing: "fixed",
@@ -128,7 +103,7 @@ export const serviceGroups = [
   },
   {
     id: "streaming",
-    number: "05",
+    number: "04",
     title: "Live Streaming & Broadcast Systems",
     short: "Single-camera to multi-camera livestreams, built and tested before you go live.",
     pricing: "quote",
@@ -178,7 +153,7 @@ export const serviceGroups = [
   },
   {
     id: "audio",
-    number: "06",
+    number: "05",
     title: "Audio Engineering & Sound Systems",
     short: "Design, tuning, and mixing for rooms where people actually have to hear.",
     pricing: "quote",
@@ -228,7 +203,7 @@ export const serviceGroups = [
   },
   {
     id: "training",
-    number: "07",
+    number: "06",
     title: "Sound System & Media Team Training",
     short: "Teach the people who run the system, so it works when you are not in the room.",
     pricing: "quote",
@@ -270,7 +245,7 @@ export const serviceGroups = [
   },
   {
     id: "consulting",
-    number: "08",
+    number: "07",
     title: "Multimedia Consulting & Solutions",
     short: "A second opinion before you spend, and a plan for what to buy next.",
     pricing: "quote",
@@ -312,7 +287,7 @@ export const serviceGroups = [
   },
   {
     id: "production",
-    number: "09",
+    number: "08",
     title: "Video, Podcast & Content Production",
     short: "Content produced once and cut for every place you need it.",
     pricing: "quote",
@@ -351,32 +326,5 @@ export const serviceGroups = [
       },
     ],
     note: "Production is quoted per project. Deliverables, revisions, and usage rights are confirmed in writing before shooting.",
-  },
-];
-
-export const processSteps = [
-  {
-    number: "01",
-    title: "Discovery call",
-    description:
-      "Thirty minutes on the phone or on site. What you have, what is breaking, and what you actually need it to do.",
-  },
-  {
-    number: "02",
-    title: "Scope & quote",
-    description:
-      "A written scope with either a fixed price or a quote range, so you know the number before anything starts.",
-  },
-  {
-    number: "03",
-    title: "Build or install",
-    description:
-      "Design, build, and installation, with progress you can see and no surprise line items.",
-  },
-  {
-    number: "04",
-    title: "Launch & train",
-    description:
-      "Go live, documentation handed over, and the people who run the system trained on it.",
   },
 ];

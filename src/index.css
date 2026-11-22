@@ -109,6 +109,6 @@
   }
 
   .mono-label {
-    @apply font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground;
+    @apply font-mono text-[12px] uppercase tracking-[0.3em] text-muted-foreground;
   }
 }

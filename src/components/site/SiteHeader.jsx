@@ -21,7 +21,7 @@ export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/85 backdrop-blur-xl">
       <div className="mx-auto flex h-[68px] max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
-        <Link to="/" className="group flex items-center gap-3" aria-label="Parenti Media Solutions home">
+        <Link to="/" className="group flex items-center gap-3" aria-label="Parenti Digital home">
           <span className="relative flex h-9 w-9 items-center justify-center border border-primary/60">
             <span className="h-1.5 w-1.5 bg-primary transition-transform duration-300 group-hover:scale-150" />
           </span>
@@ -29,8 +29,8 @@ export default function SiteHeader() {
             <span className="font-display text-[15px] font-extrabold uppercase tracking-[0.22em] text-foreground">
               Parenti
             </span>
-            <span className="mt-1 font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground">
-              Media · AV · Live
+            <span className="mt-1 font-mono text-[12px] uppercase tracking-[0.3em] text-muted-foreground">
+              Digital · AV · Live
             </span>
           </span>
         </Link>
@@ -43,7 +43,7 @@ export default function SiteHeader() {
                 key={item.to}
                 to={item.to}
                 className={cn(
-                  "relative font-mono text-[11px] uppercase tracking-[0.22em] transition-colors",
+                  "relative font-mono text-[13px] uppercase tracking-[0.22em] transition-colors",
                   active ? "text-primary" : "text-muted-foreground hover:text-foreground"
                 )}
               >
@@ -59,7 +59,7 @@ export default function SiteHeader() {
         <div className="flex items-center gap-3">
           <Link
             to="/contact"
-            className="group hidden min-h-[42px] items-center gap-2 bg-primary px-5 font-mono text-[10px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90 sm:inline-flex"
+            className="group hidden min-h-[42px] items-center gap-2 bg-primary px-5 font-mono text-[12px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90 sm:inline-flex"
           >
             Request a quote
             <ArrowUpRight
@@ -87,7 +87,7 @@ export default function SiteHeader() {
               <Link
                 key={item.to}
                 to={item.to}
-                className="flex min-h-[52px] items-center justify-between border-b border-border/60 font-mono text-[11px] uppercase tracking-[0.22em] text-foreground last:border-0"
+                className="flex min-h-[52px] items-center justify-between border-b border-border/60 font-mono text-[13px] uppercase tracking-[0.22em] text-foreground last:border-0"
               >
                 {item.label}
                 <ArrowUpRight className="h-3.5 w-3.5 text-primary" aria-hidden="true" />

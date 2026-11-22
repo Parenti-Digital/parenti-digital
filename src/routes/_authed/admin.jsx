@@ -5,7 +5,7 @@ import { Loader2, LogOut, Mail, Phone } from "lucide-react";
 
 export const Route = createFileRoute("/_authed/admin")({
   head: () => ({
-    meta: [{ title: "Service Requests — Parenti Media Solutions" }],
+    meta: [{ title: "Service Requests — Parenti Digital" }],
   }),
   component: AdminPage,
 });
@@ -65,7 +65,7 @@ function AdminPage() {
         </p>
         <Link
           to="/"
-          className="mt-8 inline-flex min-h-[44px] w-fit items-center border border-border px-5 font-mono text-[10px] uppercase tracking-[0.22em] hover:border-primary/60 hover:text-primary"
+          className="mt-8 inline-flex min-h-[44px] w-fit items-center border border-border px-5 font-mono text-[12px] uppercase tracking-[0.22em] hover:border-primary/60 hover:text-primary"
         >
           Back to the site
         </Link>
@@ -86,14 +86,14 @@ function AdminPage() {
           <div className="flex items-center gap-3">
             <Link
               to="/"
-              className="inline-flex min-h-[40px] items-center border border-border px-4 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground hover:border-primary/60 hover:text-primary"
+              className="inline-flex min-h-[40px] items-center border border-border px-4 font-mono text-[12px] uppercase tracking-[0.2em] text-muted-foreground hover:border-primary/60 hover:text-primary"
             >
               View site
             </Link>
             <button
               type="button"
               onClick={() => base44.auth.logout("/")}
-              className="inline-flex min-h-[40px] items-center gap-2 border border-border px-4 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground hover:border-primary/60 hover:text-primary"
+              className="inline-flex min-h-[40px] items-center gap-2 border border-border px-4 font-mono text-[12px] uppercase tracking-[0.2em] text-muted-foreground hover:border-primary/60 hover:text-primary"
             >
               <LogOut className="h-3.5 w-3.5" aria-hidden="true" />
               Sign out
@@ -109,7 +109,7 @@ function AdminPage() {
               key={status}
               type="button"
               onClick={() => setFilter(status)}
-              className={`inline-flex min-h-[38px] items-center border px-3 font-mono text-[10px] uppercase tracking-[0.18em] transition-colors ${
+              className={`inline-flex min-h-[38px] items-center border px-3 font-mono text-[12px] uppercase tracking-[0.18em] transition-colors ${
                 filter === status
                   ? "border-primary bg-primary text-primary-foreground"
                   : "border-border text-muted-foreground hover:border-primary/60 hover:text-primary"
@@ -127,7 +127,7 @@ function AdminPage() {
         ) : null}
 
         {loading ? (
-          <div className="flex items-center gap-3 py-16 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+          <div className="flex items-center gap-3 py-16 font-mono text-[12px] uppercase tracking-[0.22em] text-muted-foreground">
             <Loader2 className="h-4 w-4 animate-spin text-primary" aria-hidden="true" />
             Loading requests
           </div>
@@ -150,14 +150,14 @@ function AdminPage() {
                         <span className="text-muted-foreground"> · {request.organization}</span>
                       ) : null}
                     </h2>
-                    <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+                    <p className="mt-1 font-mono text-[12px] uppercase tracking-[0.16em] text-muted-foreground">
                       {request.service || "No service selected"}
                       {request.budget ? ` · ${request.budget}` : ""}
                       {request.timeline ? ` · ${request.timeline}` : ""}
                     </p>
                   </div>
                   <span
-                    className={`inline-flex items-center border px-2 py-1 font-mono text-[9px] uppercase tracking-[0.18em] ${
+                    className={`inline-flex items-center border px-2 py-1 font-mono text-[11px] uppercase tracking-[0.18em] ${
                       statusStyles[request.status] || statusStyles.new
                     }`}
                   >
@@ -186,7 +186,7 @@ function AdminPage() {
                       {request.phone}
                     </a>
                   ) : null}
-                  <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground/70">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground/70">
                     {request.created_date
                       ? new Date(request.created_date).toLocaleString("en-US", {
                           dateStyle: "medium",
@@ -201,7 +201,7 @@ function AdminPage() {
                     <select
                       value={request.status || "new"}
                       onChange={(event) => updateStatus(request.id, event.target.value)}
-                      className="h-[36px] border border-border bg-background px-2 font-mono text-[10px] uppercase tracking-[0.16em] text-foreground focus:border-primary focus:outline-none"
+                      className="h-[36px] border border-border bg-background px-2 font-mono text-[12px] uppercase tracking-[0.16em] text-foreground focus:border-primary focus:outline-none"
                     >
                       {statuses.map((status) => (
                         <option key={status} value={status}>

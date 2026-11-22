@@ -7,11 +7,11 @@ import { serviceGroups } from "@/lib/services-data";
 export const Route = createFileRoute("/_site/services")({
   head: () => ({
     meta: [
-      { title: "Services — Parenti Media Solutions" },
+      { title: "Services — Parenti Digital" },
       {
         name: "description",
         content:
-          "Websites, domains and professional email, social media, maintenance, livestream and broadcast systems, audio engineering, sound system tuning, team training, multimedia consulting, and content production.",
+          "Websites, domains and professional email, maintenance, livestream and broadcast systems, audio engineering, sound system tuning, team training, multimedia consulting, and content production.",
       },
     ],
   }),
@@ -33,7 +33,7 @@ function ServicesPage() {
               key={group.id}
               to="/services"
               hash={group.id}
-              className="inline-flex min-h-[38px] items-center border border-border px-3 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary"
+              className="inline-flex min-h-[38px] items-center border border-border px-3 font-mono text-[12px] uppercase tracking-[0.16em] text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary"
             >
               {group.number} · {group.title}
             </Link>

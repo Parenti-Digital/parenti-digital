@@ -20,17 +20,17 @@ export default function ServiceCard({ group }) {
       />
       <div>
         <div className="flex items-start justify-between gap-4">
-          <span className="font-mono text-[11px] tracking-[0.25em] text-primary">{group.number}</span>
-          <span className="mono-label whitespace-nowrap border border-border px-2 py-1 text-[9px]">
+          <span className="font-mono text-[13px] tracking-[0.25em] text-primary">{group.number}</span>
+          <span className="mono-label whitespace-nowrap border border-border px-2 py-1 text-[12px]">
             {pricingLabels[group.pricing]}
           </span>
         </div>
         <h3 className="mt-6 font-display text-lg font-bold leading-tight tracking-[-0.01em] text-foreground">
           {group.title}
         </h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{group.short}</p>
+        <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{group.short}</p>
       </div>
-      <span className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-foreground/70 transition-colors group-hover:text-primary">
+      <span className="flex items-center gap-2 font-mono text-[12px] uppercase tracking-[0.25em] text-foreground/70 transition-colors group-hover:text-primary">
         View details
         <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
       </span>

@@ -8,11 +8,11 @@ import { serviceGroups } from "@/lib/services-data";
 export const Route = createFileRoute("/_site/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing — Parenti Media Solutions" },
+      { title: "Pricing — Parenti Digital" },
       {
         name: "description",
         content:
-          "Published prices for websites, domains and email, social media setup, and monthly website support. Production, streaming, audio, training, and consulting are quoted after a walkthrough.",
+          "Published prices for websites, domains and email setup, and monthly website support. Production, streaming, audio, training, and consulting are quoted after a walkthrough.",
       },
     ],
   }),
@@ -34,7 +34,7 @@ function PricingPage() {
 
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <section className="py-14 lg:py-20">
-          <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em]">
+          <div className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.3em]">
             <span className="text-primary">A</span>
             <span className="h-px w-6 bg-primary/60" aria-hidden="true" />
             <span className="text-muted-foreground">Fixed price</span>
@@ -54,7 +54,7 @@ function PricingPage() {
                   <Link
                     to="/services"
                     hash={group.id}
-                    className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:text-primary"
+                    className="font-mono text-[12px] uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:text-primary"
                   >
                     Details
                   </Link>
@@ -73,7 +73,7 @@ function PricingPage() {
         </section>
 
         <section className="border-t border-border py-14 lg:py-20">
-          <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em]">
+          <div className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.3em]">
             <span className="text-primary">B</span>
             <span className="h-px w-6 bg-primary/60" aria-hidden="true" />
             <span className="text-muted-foreground">Quoted work</span>
@@ -90,10 +90,10 @@ function PricingPage() {
             {quotedGroups.map((group) => (
               <div key={group.id} className="bg-background p-6">
                 <div className="flex items-center justify-between gap-3">
-                  <span className="font-mono text-[11px] tracking-[0.25em] text-primary">
+                  <span className="font-mono text-[13px] tracking-[0.25em] text-primary">
                     {group.number}
                   </span>
-                  <span className="mono-label border border-border px-2 py-1 text-[9px]">
+                  <span className="mono-label border border-border px-2 py-1 text-[12px]">
                     Quote
                   </span>
                 </div>
@@ -110,7 +110,7 @@ function PricingPage() {
                 </ul>
                 <Link
                   to="/contact"
-                  className="group mt-6 inline-flex min-h-[44px] items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-foreground transition-colors hover:text-primary"
+                  className="group mt-6 inline-flex min-h-[44px] items-center gap-2 font-mono text-[12px] uppercase tracking-[0.22em] text-foreground transition-colors hover:text-primary"
                 >
                   Request a quote
                   <ArrowRight

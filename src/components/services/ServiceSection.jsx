@@ -13,7 +13,7 @@ export default function ServiceSection({ group }) {
     <section id={group.id} className="scroll-mt-24 border-b border-border py-14 lg:py-20">
       <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div>
-          <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em]">
+          <div className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.3em]">
             <span className="text-primary">{group.number}</span>
             <span className="h-px w-6 bg-primary/60" aria-hidden="true" />
             <span className="text-muted-foreground">{pricingLabels[group.pricing]}</span>
@@ -24,7 +24,7 @@ export default function ServiceSection({ group }) {
           <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">{group.short}</p>
           <Link
             to="/contact"
-            className="group mt-7 inline-flex min-h-[44px] items-center gap-2 border border-border px-4 font-mono text-[10px] uppercase tracking-[0.22em] text-foreground transition-colors hover:border-primary/60 hover:text-primary"
+            className="group mt-7 inline-flex min-h-[44px] items-center gap-2 border border-border px-4 font-mono text-[12px] uppercase tracking-[0.22em] text-foreground transition-colors hover:border-primary/60 hover:text-primary"
           >
             Start a conversation
             <ArrowRight
