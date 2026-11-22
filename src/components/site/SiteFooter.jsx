@@ -81,9 +81,6 @@ export default function SiteFooter() {
             © {year} {BRAND.name} LLC · All rights reserved
           </p>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-            <p className="font-mono text-[12px] uppercase tracking-[0.22em] text-muted-foreground">
-              On-site and remote · Chicago area
-            </p>
             <Link
               to="/login"
               className="font-mono text-[12px] uppercase tracking-[0.22em] text-muted-foreground transition-colors hover:text-primary"

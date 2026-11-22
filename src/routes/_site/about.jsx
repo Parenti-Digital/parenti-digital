@@ -141,8 +141,8 @@ function AboutPage() {
                 Where the work happens.
               </h2>
               <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-                On site in the Chicago area, or remote for anything that runs through a screen.
-                Direct contact, no account manager in between.
+                Remote, for anything that runs through a screen. Direct contact, no account
+                manager in between.
               </p>
               <a
                 href={BRAND.emailHref}

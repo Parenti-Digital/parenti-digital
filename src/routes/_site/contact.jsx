@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Phone, Clock } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import PageHeader from "@/components/site/PageHeader";
 import RequestForm from "@/components/contact/RequestForm";
 import { BRAND, serviceGroups } from "@/lib/services-data";
@@ -61,10 +61,6 @@ function ContactPage() {
                     <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
                     {BRAND.phone}
                   </a>
-                </li>
-                <li className="flex items-start gap-3 text-[15px] text-muted-foreground">
-                  <Clock className="mt-0.5 h-4 w-4 text-primary" aria-hidden="true" />
-                  <span>On site in the Chicago area, remote anywhere.</span>
                 </li>
               </ul>
             </div>
