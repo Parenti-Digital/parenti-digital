@@ -327,4 +327,46 @@ export const serviceGroups = [
     ],
     note: "Production is quoted per project. Deliverables, revisions, and usage rights are confirmed in writing before shooting.",
   },
+  {
+    id: "social-setup",
+    number: "09",
+    title: "Social & Business Account Setup",
+    short: "Facebook, Instagram, YouTube, and LinkedIn set up once, connected to your business.",
+    pricing: "quote",
+    items: [
+      {
+        name: "Social Account Setup",
+        price: "Request a quote",
+        unit: "",
+        quote: true,
+        description:
+          "New accounts on Facebook, Instagram, YouTube, and LinkedIn, or cleanup of the ones you already have, with your logo, description, contact details, and links filled in consistently across all four.",
+      },
+      {
+        name: "Business Account & Page Conversion",
+        price: "Request a quote",
+        unit: "",
+        quote: true,
+        description:
+          "Converting personal profiles into proper business pages and accounts wherever the platform allows it, so you get business tools, insights, and a professional presence instead of a personal profile.",
+      },
+      {
+        name: "Streaming & Platform Connections",
+        price: "Request a quote",
+        unit: "",
+        quote: true,
+        description:
+          "Linking your accounts to your streaming and publishing destinations, including YouTube and Facebook Live, so you can go live without hunting for settings mid-broadcast.",
+      },
+      {
+        name: "Handoff & Credentials Document",
+        price: "Request a quote",
+        unit: "",
+        quote: true,
+        description:
+          "Every login, admin role, and connection written down and handed to you, with a walkthrough of how to post and go live on each platform.",
+      },
+    ],
+    note: "One-time setup only. No ongoing posting, content management, or account monitoring. All accounts stay in your name and under your ownership.",
+  },
 ];
