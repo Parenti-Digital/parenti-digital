@@ -30,7 +30,7 @@ export default function SiteHeader() {
               Parenti Digital
             </span>
             <span className="mt-1 font-mono text-[12px] uppercase tracking-[0.3em] text-muted-foreground">
-              AV · Live
+              Websites · AV · Live
             </span>
           </span>
         </Link>
