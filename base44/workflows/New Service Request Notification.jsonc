@@ -1,5 +1,4 @@
 {
-  "name": "New Service Request Notification",
   "description": "Emails the owner when a new ServiceRequest is submitted through the contact form.",
   "trigger": {
     "condition": null,
@@ -11,6 +10,7 @@
       "entity_name": "ServiceRequest"
     }
   },
+  "name": "New Service Request Notification",
   "definition": {
     "document": {
       "dsl": "1.0.0",
@@ -21,20 +21,16 @@
     "do": [
       {
         "notify_owner": {
-          "call": "send_email",
+          "call": "invoke_server_route",
           "with": {
-            "template_name": "NewServiceRequest",
-            "to": "MSParentiJr@gmail.com",
-            "category": "transactional",
-            "description": "Notifies the owner of a new contact form submission",
-            "variables": {
+            "path": "/api/notify-service-request",
+            "body": {
               "name": "${ .trigger.data.name }",
               "email": "${ .trigger.data.email }",
               "phone": "${ .trigger.data.phone }",
               "organization": "${ .trigger.data.organization }",
               "service": "${ .trigger.data.service }",
-              "message": "${ .trigger.data.message }",
-              "admin_url": "https://parentidigital.msparenti.com/admin"
+              "message": "${ .trigger.data.message }"
             }
           },
           "then": "end",
