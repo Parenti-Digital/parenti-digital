@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import PageHeader from "@/components/site/PageHeader";
-import ServiceSection from "@/components/services/ServiceSection";
+import ServicesSearch from "@/components/services/ServicesSearch";
 import CtaBand from "@/components/site/CtaBand";
 import { serviceGroups } from "@/lib/services-data";
 
@@ -41,11 +41,7 @@ function ServicesPage() {
         </div>
       </PageHeader>
 
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        {serviceGroups.map((group) => (
-          <ServiceSection key={group.id} group={group} />
-        ))}
-      </div>
+      <ServicesSearch groups={serviceGroups} />
 
       <CtaBand
         title="Not sure which line you need?"
