@@ -1,0 +1,49 @@
+{
+  "name": "New Service Request Notification",
+  "description": "Emails the owner when a new ServiceRequest is submitted through the contact form.",
+  "trigger": {
+    "condition": null,
+    "config": {
+      "trigger_type": "entity",
+      "events": [
+        "create"
+      ],
+      "entity_name": "ServiceRequest"
+    }
+  },
+  "definition": {
+    "document": {
+      "dsl": "1.0.0",
+      "name": "new_service_request_notification",
+      "version": "1.0",
+      "namespace": "base44"
+    },
+    "do": [
+      {
+        "notify_owner": {
+          "call": "send_email",
+          "with": {
+            "template_name": "NewServiceRequest",
+            "to": "MSParentiJr@gmail.com",
+            "category": "transactional",
+            "description": "Notifies the owner of a new contact form submission",
+            "variables": {
+              "name": "${ .trigger.data.name }",
+              "email": "${ .trigger.data.email }",
+              "phone": "${ .trigger.data.phone }",
+              "organization": "${ .trigger.data.organization }",
+              "service": "${ .trigger.data.service }",
+              "message": "${ .trigger.data.message }",
+              "admin_url": "https://parentidigital.msparenti.com/admin"
+            }
+          },
+          "then": "end",
+          "x-base44": {
+            "title": "Notify owner",
+            "description": "Emails the new request details"
+          }
+        }
+      }
+    ]
+  }
+}
