@@ -57,7 +57,7 @@
   "required": [
     "name",
     "email",
-    "message"
+    "phone"
   ],
   "rls": {
     "create": {},

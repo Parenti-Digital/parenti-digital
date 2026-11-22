@@ -5,24 +5,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { serviceGroups } from "@/lib/services-data";
 
-const budgetOptions = [
-  "Under $500",
-  "$500 – $1,500",
-  "$1,500 – $5,000",
-  "$5,000 – $15,000",
-  "Not sure yet",
-];
-
-const timelineOptions = ["As soon as possible", "Within a month", "One to three months", "Planning ahead"];
-
 const emptyForm = {
-  name: "",
+  firstName: "",
+  lastName: "",
   email: "",
   phone: "",
   organization: "",
   service: "",
-  budget: "",
-  timeline: "",
   message: "",
 };
 
@@ -40,14 +29,21 @@ export default function RequestForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setError("");
-    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
-      setError("Name, email, and a short description are required.");
+    if (
+      !form.firstName.trim() ||
+      !form.lastName.trim() ||
+      !form.email.trim() ||
+      !form.phone.trim()
+    ) {
+      setError("First name, last name, email, and phone are required.");
       return;
     }
     setSubmitting(true);
     try {
+      const { firstName, lastName, ...rest } = form;
       await base44.entities.ServiceRequest.create({
-        ...form,
+        ...rest,
+        name: `${firstName} ${lastName}`.trim(),
         status: "new",
       });
       setSent(true);
@@ -85,10 +81,26 @@ export default function RequestForm() {
     <form onSubmit={handleSubmit} className="border border-border bg-card/40 p-6 lg:p-8" noValidate>
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="sm:col-span-1">
-          <Label htmlFor="name" className="mono-label text-foreground">
-            Name *
+          <Label htmlFor="firstName" className="mono-label text-foreground">
+            First name *
           </Label>
-          <Input id="name" value={form.name} onChange={update("name")} className={`mt-2 ${fieldClass}`} />
+          <Input
+            id="firstName"
+            value={form.firstName}
+            onChange={update("firstName")}
+            className={`mt-2 ${fieldClass}`}
+          />
+        </div>
+        <div className="sm:col-span-1">
+          <Label htmlFor="lastName" className="mono-label text-foreground">
+            Last name *
+          </Label>
+          <Input
+            id="lastName"
+            value={form.lastName}
+            onChange={update("lastName")}
+            className={`mt-2 ${fieldClass}`}
+          />
         </div>
         <div className="sm:col-span-1">
           <Label htmlFor="email" className="mono-label text-foreground">
@@ -104,7 +116,7 @@ export default function RequestForm() {
         </div>
         <div className="sm:col-span-1">
           <Label htmlFor="phone" className="mono-label text-foreground">
-            Phone
+            Phone *
           </Label>
           <Input
             id="phone"
@@ -114,7 +126,7 @@ export default function RequestForm() {
             className={`mt-2 ${fieldClass}`}
           />
         </div>
-        <div className="sm:col-span-1">
+        <div className="sm:col-span-2">
           <Label htmlFor="organization" className="mono-label text-foreground">
             Organization
           </Label>
@@ -146,46 +158,9 @@ export default function RequestForm() {
           </select>
         </div>
 
-        <div className="sm:col-span-1">
-          <Label htmlFor="budget" className="mono-label text-foreground">
-            Budget range
-          </Label>
-          <select
-            id="budget"
-            value={form.budget}
-            onChange={update("budget")}
-            className="mt-2 flex h-[46px] w-full border border-border bg-background px-3 font-body text-sm text-foreground focus:border-primary focus:outline-none"
-          >
-            <option value="">Select a range</option>
-            {budgetOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="sm:col-span-1">
-          <Label htmlFor="timeline" className="mono-label text-foreground">
-            Timeline
-          </Label>
-          <select
-            id="timeline"
-            value={form.timeline}
-            onChange={update("timeline")}
-            className="mt-2 flex h-[46px] w-full border border-border bg-background px-3 font-body text-sm text-foreground focus:border-primary focus:outline-none"
-          >
-            <option value="">Select a timeline</option>
-            {timelineOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        </div>
-
         <div className="sm:col-span-2">
           <Label htmlFor="message" className="mono-label text-foreground">
-            Details *
+            Details
           </Label>
           <Textarea
             id="message"
@@ -211,9 +186,6 @@ export default function RequestForm() {
       >
         {submitting ? "Sending…" : "Send request"}
       </button>
-      <p className="mt-3 font-mono text-[12px] uppercase tracking-[0.18em] text-muted-foreground">
-        Details are used only to reply to your request.
-      </p>
     </form>
   );
 }
