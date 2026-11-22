@@ -1,7 +1,18 @@
 import { useCallback, useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { base44 } from "@/api/base44Client";
-import { Loader2, LogOut, Mail, Phone } from "lucide-react";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import { Loader2, LogOut, Mail, Phone, Trash2 } from "lucide-react";
 
 export const Route = createFileRoute("/_authed/admin")({
   head: () => ({
@@ -51,6 +62,15 @@ function AdminPage() {
   const updateStatus = async (id, status) => {
     setRequests((prev) => prev.map((r) => (r.id === id ? { ...r, status } : r)));
     await base44.entities.ServiceRequest.update(id, { status });
+  };
+
+  const deleteRequest = async (id) => {
+    setRequests((prev) => prev.filter((r) => r.id !== id));
+    try {
+      await base44.entities.ServiceRequest.delete(id);
+    } catch (err) {
+      load();
+    }
   };
 
   if (user?.role !== "admin") {
@@ -196,20 +216,53 @@ function AdminPage() {
                       : ""}
                   </span>
 
-                  <label className="ml-auto flex items-center gap-2">
-                    <span className="sr-only">Status for {request.name}</span>
-                    <select
-                      value={request.status || "new"}
-                      onChange={(event) => updateStatus(request.id, event.target.value)}
-                      className="h-[36px] border border-border bg-background px-2 font-mono text-[12px] uppercase tracking-[0.16em] text-foreground focus:border-primary focus:outline-none"
-                    >
-                      {statuses.map((status) => (
-                        <option key={status} value={status}>
-                          {status}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
+                  <div className="ml-auto flex items-center gap-3">
+                    <label className="flex items-center gap-2">
+                      <span className="sr-only">Status for {request.name}</span>
+                      <select
+                        value={request.status || "new"}
+                        onChange={(event) => updateStatus(request.id, event.target.value)}
+                        className="h-[36px] border border-border bg-background px-2 font-mono text-[12px] uppercase tracking-[0.16em] text-foreground focus:border-primary focus:outline-none"
+                      >
+                        {statuses.map((status) => (
+                          <option key={status} value={status}>
+                            {status}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+
+                    <AlertDialog>
+                      <AlertDialogTrigger asChild>
+                        <button
+                          type="button"
+                          aria-label={`Delete request from ${request.name}`}
+                          className="inline-flex h-[36px] w-[36px] items-center justify-center border border-border text-muted-foreground transition-colors hover:border-destructive/70 hover:text-destructive"
+                        >
+                          <Trash2 className="h-3.5 w-3.5" aria-hidden="true" />
+                        </button>
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle>Delete this request?</AlertDialogTitle>
+                          <AlertDialogDescription>
+                            This permanently removes the submission from{" "}
+                            <span className="text-foreground">{request.name}</span>. This cannot be
+                            undone.
+                          </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                          <AlertDialogCancel>Cancel</AlertDialogCancel>
+                          <AlertDialogAction
+                            onClick={() => deleteRequest(request.id)}
+                            className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                          >
+                            Delete
+                          </AlertDialogAction>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
+                  </div>
                 </div>
               </article>
             ))}
