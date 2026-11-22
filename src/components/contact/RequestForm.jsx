@@ -154,6 +154,7 @@ export default function RequestForm() {
                 {group.number} · {group.title}
               </option>
             ))}
+            <option value="Multiple services">Multiple services</option>
             <option value="Not sure yet">Not sure yet</option>
           </select>
         </div>
