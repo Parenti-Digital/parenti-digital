@@ -309,14 +309,6 @@ export const serviceGroups = [
           "Studio or remote recording, editing, show notes, and publishing to the major podcast platforms.",
       },
       {
-        name: "Content Capture Days",
-        price: "Request a quote",
-        unit: "",
-        quote: true,
-        description:
-          "A single session to capture a batch of photo and video for your website, social, and print materials.",
-      },
-      {
         name: "Brand & Graphic Design",
         price: "Request a quote",
         unit: "",
