@@ -53,10 +53,10 @@ export default function Hero() {
               />
             </Link>
             <Link
-              to="/pricing"
+              to="/services"
               className="inline-flex min-h-[52px] items-center justify-center border border-border px-7 font-mono text-[13px] uppercase tracking-[0.22em] text-foreground transition-colors hover:border-primary/60 hover:text-primary"
             >
-              See pricing
+              View services
             </Link>
           </div>
 
