@@ -26,11 +26,11 @@ export default function SiteHeader() {
             <span className="h-1.5 w-1.5 bg-primary transition-transform duration-300 group-hover:scale-150" />
           </span>
           <span className="flex flex-col leading-none">
-            <span className="font-display text-[15px] font-extrabold uppercase tracking-[0.22em] text-foreground">
-              Parenti
+            <span className="font-display text-[15px] font-extrabold uppercase tracking-[0.16em] text-foreground">
+              Parenti Digital
             </span>
             <span className="mt-1 font-mono text-[12px] uppercase tracking-[0.3em] text-muted-foreground">
-              Digital · AV · Live
+              AV · Live
             </span>
           </span>
         </Link>
