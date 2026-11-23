@@ -28,11 +28,11 @@ export default function Hero() {
           </div>
 
           <h1 className="mt-7 font-display text-[2.6rem] font-extrabold leading-[0.95] tracking-[-0.03em] text-foreground sm:text-6xl lg:text-[4.1rem]">
-            Media that works
+            Web, audio, and AV solutions
             <br />
-            every time you
+            that solve your everyday
             <br />
-            <span className="text-primary">turn it on.</span>
+            <span className="text-primary">media challenges.</span>
           </h1>
 
           <p className="mt-7 max-w-xl text-[15px] leading-relaxed text-muted-foreground sm:text-base">
