@@ -5,7 +5,7 @@ import { Image } from "@/components/ui/image";
 const bands = [
   {
     id: "web",
-    kicker: "01 — Websites & digital",
+    kicker: "Websites & digital",
     title: "Sites built to load fast and sell your work.",
     copy: "A website should be the clearest thing your organization owns: fast, readable on any device, and easy to update once the build is done. Fixed prices mean you know the cost before we start, and the result is documented so your team can keep it running.",
     points: [
@@ -21,7 +21,7 @@ const bands = [
   },
   {
     id: "streaming",
-    kicker: "05 — Live streaming",
+    kicker: "Live streaming",
     title: "Broadcast that does not fall over on show day.",
     copy: "A stream is only as good as the weakest link: the upload, the encoder, the audio feed, the operator. Every piece gets tested before you go live, and the person running it gets trained on it.",
     points: [
@@ -37,7 +37,7 @@ const bands = [
   },
   {
     id: "audio",
-    kicker: "06 — Audio engineering",
+    kicker: "Audio engineering",
     title: "Sound you can hear in every seat.",
     copy: "Rooms fight back. Speakers get hung where the ladder reached, feedback lives in the front row, and the back of the room gets nothing but rumble. Measurement, tuning, and gain structure fix most of it before new gear does.",
     points: [
