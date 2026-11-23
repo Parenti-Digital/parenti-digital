@@ -33,7 +33,7 @@ const bands = [
     image:
       "https://media.base44.com/images/public/6b024dc75191b06f08c1b92c/f450014d5_generated_image.png",
     imageAlt: "Rack-mounted streaming encoder and video switcher with red status lights",
-    reverse: false,
+    reverse: true,
   },
   {
     id: "audio",
@@ -49,7 +49,7 @@ const bands = [
     image:
       "https://media.base44.com/images/public/6b024dc75191b06f08c1b92c/1c4c7f6f4_generated_image.png",
     imageAlt: "Studio condenser microphone lit by a red rim light",
-    reverse: true,
+    reverse: false,
   },
 ];
 
