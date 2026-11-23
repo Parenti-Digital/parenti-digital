@@ -4,6 +4,22 @@ import { Image } from "@/components/ui/image";
 
 const bands = [
   {
+    id: "web",
+    kicker: "01 — Websites & digital",
+    title: "Sites built to load fast and sell your work.",
+    copy: "A website should be the clearest thing your organization owns: fast, readable on any device, and easy to update once the build is done. Fixed prices mean you know the cost before we start, and the result is documented so your team can keep it running.",
+    points: [
+      "Fixed-price custom websites from $1,000",
+      "Domain, email, and hosting setup",
+      "Responsive design that works on every device",
+      "Documentation and training so your team can update it",
+    ],
+    image:
+      "https://media.base44.com/images/public/6b024dc75191b06f08c1b92c/3d7ab75c4_generated_image.png",
+    imageAlt: "Modern website interface on a monitor in a dark studio with red accent lighting",
+    reverse: false,
+  },
+  {
     id: "streaming",
     kicker: "05 — Live streaming",
     title: "Broadcast that does not fall over on show day.",
