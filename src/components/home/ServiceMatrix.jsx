@@ -10,7 +10,7 @@ export default function ServiceMatrix() {
           <SectionHeading
             kicker="Service matrix"
             title="Nine disciplines, one operator."
-            description="Most organizations end up juggling a web designer, a sound guy, and a streaming volunteer who all blame each other. Here it is one system, one point of contact, and one person who knows how the pieces connect."
+            description="Keeping your website, sound system, and livestream running smoothly usually means coordinating separate people who rarely talk to each other. I bring all of it together as one connected system, so updates, fixes, and new work all flow through a single point of contact who understands the whole picture."
           />
           <p className="max-w-xs border-l border-primary/40 pl-4 font-mono text-[12px] uppercase leading-relaxed tracking-[0.18em] text-muted-foreground">
             Digital work is fixed price. Production and install work is quoted after a walkthrough.
