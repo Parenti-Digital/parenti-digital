@@ -13,7 +13,7 @@ export default function CtaBand({ title, description }) {
           </h2>
           <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-muted-foreground">
             {description ||
-              "Send the details and you will get a straight answer: what it takes, what it costs, and whether I am the right person for it."}
+              "Send the details and you will get a no-nonsense breakdown of the scope and the cost."}
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
