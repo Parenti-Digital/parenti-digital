@@ -36,9 +36,9 @@ export default function Hero() {
           </h1>
 
           <p className="mt-7 max-w-xl text-[15px] leading-relaxed text-muted-foreground sm:text-base">
-            Websites, livestreams, sound systems, and the training to run them. Fixed prices for
-            digital work, scoped quotes for production, and one person accountable from the first
-            call to the day it goes live.
+            Web, livestream, and audio systems, built to work. Clear fixed pricing for digital
+            projects, tailored quotes for production, and one point of contact from kickoff to
+            launch.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
